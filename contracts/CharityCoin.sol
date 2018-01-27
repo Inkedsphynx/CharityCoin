@@ -121,8 +121,8 @@ contract CharityCoin is ERC20,CharityCoinStandard,Ownable {
     uint public chainStartTime; //chain start time
     uint public chainStartBlockNumber; //chain start block number
     uint public stakeStartTime; //stake start time
-    uint public stakeMinAge = 5 days; // minimum age for coin age: 3D
-    uint public stakeMaxAge = 50 days; // stake age of full weight: 90D
+    uint public stakeMinAge = 5 days; // minimum age for coin age: 5D
+    uint public stakeMaxAge = 50 days; // stake age of full weight: 50D
     uint public maxMintProofOfStake = 5**17; // default 5% annual interest
 
     uint public totalSupply;
@@ -154,8 +154,8 @@ contract CharityCoin is ERC20,CharityCoinStandard,Ownable {
     }
 
     function CharityCoin() {
-        maxTotalSupply = 10**25; // 10 Mil.
-        totalInitialSupply = 10**24; // 1 Mil.
+        maxTotalSupply = 20**25; // 20 Mil.
+        totalInitialSupply = 20**24; // 2 Mil.
 
         chainStartTime = now;
         chainStartBlockNumber = block.number;
